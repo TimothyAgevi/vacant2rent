@@ -2,33 +2,50 @@ import React from "react";
 import {Link} from 'react-router-dom'
 import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer";
-import aile from "../assets/img/google.svg"
-import  git from '../assets/img/github.svg'
+import '../../Login/views/Login.css'
+import {Helmet} from 'react-helmet'
+// import aile from "../assets/img/google.svg"
+// import  git from '../assets/img/github.svg'
+
+// recaptcha code 
+function get_action(form){
+  // let v=grecaptcha.getResponse();
+
+  // if (v.length==0){
+  //   document.getElementById('captcha').innerHTML="Please confirm recaptcha to proceed";
+  // }
+
+  // else{
+  //   document.getElementById('captcha').innerHtml="Recptcha successful";
+  //   return true;
+  // }
+}
 
 export default function Login() {
   return (
     <>
       <Navbar/>
       <main>
-        <section className="absolute w-full h-full">
+        <section className="absolute w-full h-full ">
           <div
-            className="absolute top-0 w-full h-full bg-gray-900"
+            className="absolute top-0 w-full h-full bg-gray-900 login-bg" 
             style={{
-              backgroundColor:"black",
+              backgroundColor:"whitesmoke",
               backgroundSize: "100%",
             }}
           ></div>
-          <div className=" mx-auto px-4 h-full">
+          <div className=" mx-auto px-4 h-full" style={{marginTop:"-2.5em",}}>
             <div className="flex content-center items-center justify-center h-full">
               <div className="w-full lg:w-4/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
+                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white-300 border-0" 
+                style={{backgroundColor:"white"}}>
                   <div className="rounded-t mb-0 px-6 py-6">
                     <div className="text-center mb-3">
-                      <h6 className="text-gray-600 text-sm font-bold">
-                        Sign in with
-                      </h6>
+                      <h2 className="text-black-600 text-lg font-bold" style={{fontSize:"30px",}}>
+                          Login
+                      </h2>
                     </div>
-                    <div className="btn-wrapper text-center">
+                    {/* <div className="btn-wrapper text-center">
                       <button
                         className="bg-white active:bg-gray-100 text-gray-800 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs"
                         type="button"
@@ -53,44 +70,60 @@ export default function Login() {
                         />
                         Google
                       </button>
-                    </div>
-                    <hr className="mt-6 border-b-1 border-gray-400" />
+                    </div> */}
+                    {/* <hr className="mt-6 border-b-1 border-gray-400" /> */}
                   </div>
+                  
                   <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <div className="text-gray-500 text-center mb-3 font-bold">
+                    {/* <div className="text-gray-500 text-center mb-3 font-bold">
                       <small>Or sign in with credentials</small>
-                    </div>
+                    </div> */}
                     <form>
                       <div className="relative w-full mb-3">
-                        <label
+                        {/* <label
                           className="block uppercase text-gray-700 text-xs font-bold mb-2"
                           htmlFor="grid-password"
                         >
                           Email
-                        </label>
+                        </label> */}
                         <input
                           type="email"
-                          className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                          className="border-2 px-3 py-3 placeholder-gray-400 text-black-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Email"
                           style={{ transition: "all .15s ease" }}
                         />
                       </div>
 
                       <div className="relative w-full mb-3">
-                        <label
+                        {/* <label
                           className="block uppercase text-gray-700 text-xs font-bold mb-2"
                           htmlFor="grid-password"
                         >
                           Password
-                        </label>
+                        </label> */}
                         <input
                           type="password"
-                          className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                          className="border-2 px-3 py-3 placeholder-gray-400 text-black-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                           placeholder="Password"
-                          style={{ transition: "all .15s ease" }}
+                          style={{ transition: "all .15s ease",
+                        marginTop:"1em" }}
                         />
                       </div>
-                      <div>
+
+                      {/* recaptcha */}
+                      <div className="mt-3" style={{marginLeft:"3.2em"}}>
+                        <div className="g-recaptcha" id="rcaptcha" data-sitekey="site key" style={{marginTop:"2em"}}>
+                        < Helmet>
+                            <script src="https://www.google.com/recaptcha/api.js">
+
+                            </script>
+                          </Helmet>
+                        </div>
+                      </div>
+
+
+
+                      {/* <div>
                         <label className="inline-flex items-center cursor-pointer">
                           <input
                             id="customCheckLogin"
@@ -102,21 +135,28 @@ export default function Login() {
                             Remember me
                           </span>
                         </label>
-                      </div>
+                      </div> */}
 
-                      <div className="text-center mt-6">
+                      <div className="text-center mt-6" style={{marginTop:"2em"}}>
                         <button
-                          className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                          className="text-purple active:bg-gray-700 text-sm font-bold px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                           type="button"
-                          style={{ transition: "all .15s ease",backgroundColor:"orange"  }}
+                          style={{ transition: "all .15s ease",
+                          backgroundColor:"orange" ,
+                          paddingLeft:"50px",
+                          paddingRight:"50px",
+                          borderRadius:"50px",
+                          color:"purple"
+        
+                        }}
                         >
-                          Sign In
+                          Login
                         </button>
 
-                        <Link to="/register" id="registration-link" className="text-dark">
+                        {/* <Link to="/register" id="registration-link" className="text-dark">
               No account? Register
             </Link>
-           
+            */}
                       </div>
                     </form>
                   </div>

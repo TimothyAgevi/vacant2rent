@@ -36,7 +36,7 @@ export default function HomePage() {
               <div className="w-full px-4 ml-auto mr-auto mt-6   text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    What do you want to do?
+                    What do you want to dooooooo?
                   </h1>
                   <Link to="/list_property">
                     <button className="home-btn btn btn-rounded text-white">

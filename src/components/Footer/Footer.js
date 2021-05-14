@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
+import logo from 'assets/images/logo-removebg.png'
+import '../Footer/Footer.css'
 
 class Footer extends Component {
   render() {
@@ -12,7 +14,7 @@ class Footer extends Component {
                 padding: 0px;
             }
             .footer-section {
-              background: blue;
+              background-color: rgba(76, 0, 130, 0.7);
               position: relative;
               color: white;
             }
@@ -84,13 +86,17 @@ class Footer extends Component {
               border-radius: 50%;
             }
             .facebook-bg{
-              background: #3B5998;
+              background: white;
+            }
+
+            .instagram-bg{
+              background:white
             }
             .twitter-bg{
-              background: #55ACEE;
+              background: white;
             }
-            .google-bg{
-              background: #DD4B39;
+            .linkedin-bg{
+              background: white;
             }
             .footer-widget-heading h3 {
               color: #fff;
@@ -168,9 +174,6 @@ class Footer extends Component {
               font-size: 14px;
               color: #f1f5f5;
             }
-
-
-
               `}</style>
         </Helmet>
 
@@ -178,38 +181,161 @@ class Footer extends Component {
           <div className="container">
             <div className="footer-cta pt-5 pb-5">
               <div className="row">
-                <div className="col-xl-4 col-md-4 mb-30">
+                <div className="col-xl-4 col-md-4 mb-30" style={{backgroundColor:"re"}}>
                   <div className="single-cta">
-                    <i className="fas fa-map-marker-alt"></i>
-                    <div className="cta-text">
+                    <div className="footer-logo" style={{marginTop:"-5em", marginLeft:"-6em"}}>
+                        <img src={logo} alt="footer-logo-image" style={{height:"auto", width:"80%", maxWidth:"20em"}} />
+                    </div>
+
+                    <div className="footer-social-icon" style={{color:"white"}}>
+                      {/* <span>Follow us</span> */}
+                      <a href="#" style={{color:"whitesmoke"}}>
+                        <i className="fab fa-facebook facebook"></i>
+                      </a>
+
+                      <a href="#">
+                        <i className="fab fa-instagram instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-twitter twitter"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fab fa-linkedin linkedin"></i>
+                      </a>
+                    </div>
+
+                    {/* <i className="fas fa-map-marker-alt"></i> */}
+                    {/* <div className="cta-text">
                       <h4>Find us</h4>
                       <span>Sliver Park, Block A3 No15</span>
                       <h5>Eldama Ravine Road</h5>
                       <span>Westlands, Nairobi, Kenya</span>
+                    </div> */}
+                  </div>
+                </div>
+
+                {/* our office */}
+                <div className="col-xl-4 col-md-4 mb-30 ">
+                  <div className="single-cta">
+                    {/* <i className="fas fa-phone"></i> */}
+                    <div className="cta-text ml-0 our-office">
+                      <h4>Our office</h4>
+
+                      <div className="mt-4">
+                      <span>Silver Park, Block A3 No15,</span>
+                      <h6>Eldama Ravine Road,</h6>
+                      <p class="mt-0">Westlands, Nairobi, Kenya</p >
+                    </div>
+
+
+                    <h4 className="mt-3">
+                      Subscribe to our newsletter
+                    </h4>
+
+                    <div className="subscribe-form mt-1">
+                      <form action="#">
+                        <input type="text" placeholder="Email Address" style={{width:"20em"}}/>
+                        <button className="btn btn-rounded">Submit</button>
+                      </form>
+                    </div>
+
+                      {/* <h4>Contact us</h4> */}
+                      {/* <span>0712345678</span> */}
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-4 col-md-4 mb-30">
+                <div className="col-xl-4 col-md-4 mb-30 ml-0 opening-hours" style={{marginLeft:"-4em"}}>
                   <div className="single-cta">
-                    <i className="fas fa-phone"></i>
+                    {/* <i className="far fa-envelope-open"></i> */}
                     <div className="cta-text">
-                      <h4>Contact us</h4>
-                      <span>0712345678</span>
+                      <h4>Opening hours</h4>
+                      {/* <h4>Mail us</h4> */}
+                      {/* <span>info@vacant2rent.com</span> */}
+                     <ul className="mt-4">
+                       <li>
+                         8am-5pm Mon-Fri
+                       </li>
+
+                       <li>
+                         8am-1pm Saturdays
+                       </li>
+                     </ul>
+
+                      <div className="mt-4">
+                        <span style={{fontSize:"20px"}}>Contact us</span>
+                      </div>
+
+                      <ul className="nmt-3">
+                        <li>
+                          Tel: <span style={{color:"whitesmoke"}}>
+                            <a href="tel: +254 712345678" style={{color:"white"}}> 0712345678</a>
+                          </span>
+                        </li>
+                        <li>
+                          Email: <span >
+                            <a href="mailto:info@vacant2rent.com" style={{color:"white"}}>info@vacant2rent.com</a>
+                          </span>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-4 col-md-4 mb-30">
-                  <div className="single-cta">
-                    <i className="far fa-envelope-open"></i>
-                    <div className="cta-text">
-                      <h4>Mail us</h4>
-                      <span>info@vacant2rent.com</span>
+
+                <div className="col-xl-4 col-md-4 mb-30 mt-5" >
+                    <div className="single-cta">
+                        <h4>Feedback</h4>
+
+                        <div className="feedback-form">
+                          <form action="#">
+                              <input type="email"className="rounded" placeholder="Email address" style={{backgroundColor:"rgba(76, 0, 130, 0.7)", color:"white"}}/>
+                              
+                              <textarea className="rounded" cols="40" rows="5" name="message" className="mt-2" style={{backgroundColor:"rgba(76, 0, 130, 0.7)"}}>
+                                Enter your message
+                              </textarea>
+                          </form>
+
+                          <div className="mt-4 sub-footer-button" >
+                            <button className="btn btn-rounded" style={{backgroundColor:"orange", borderRadius:"20px", float:"right",marginRight:"2em"}}>
+                              Submit
+                            </button>
+                          </div>
+                        </div>
                     </div>
-                  </div>
+                </div>
+
+                <div className="col-xl-4 col-md-4 mb-30 ml-3 mt-5 explore">
+                    <div className="single-cta">
+                        <h4>Explore</h4>
+
+                        <ul>
+                          <li>
+                            <a href="#" style={{color:"white"}}>About us</a>
+                          </li>
+
+                          <li>
+                            <a href="#" style={{color:"white"}}>List property</a>
+                          </li>
+
+                          <li>
+                            <a href="#" style={{color:"white"}}>Rent</a>
+                          </li>
+
+                          <li>
+                            <a href="#" style={{color:"white"}}>Buy</a>
+                          </li>
+
+                          <li>
+                            <a href="#" style={{color:"white"}}>Terms and conditions</a>
+                          </li>
+
+
+                        </ul>
+                    </div>
                 </div>
               </div>
             </div>
-            <div className="footer-content pt-5 pb-5">
+            {/* <div className="footer-content pt-5 pb-5">
               <div className="row">
                 <div className="col-xl-4 col-lg-4 mb-50">
                   <div className="footer-widget">
@@ -220,24 +346,15 @@ class Footer extends Component {
                           "https://images.pexels.com/photos/2235130/pexels-photo-2235130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                         }
                         alt=""
-                      />
+                      /> */}
 
                       {/* <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
                                 elit,Lorem ipsum dolor sit amet.</p> */}
                     </div>
-                    <div className="footer-social-icon">
-                      <span>Follow us</span>
-                      <a href="#">
-                        <i className="fab fa-facebook-f facebook-bg"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-twitter twitter-bg"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-google-plus-g google-bg"></i>
-                      </a>
-                    </div>
-                  </div>
+
+                    {/* footers were here */}
+
+                  {/* </div>
                 </div>
                 <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
                   <div className="footer-widget">
@@ -251,8 +368,8 @@ class Footer extends Component {
                       <li>saturday</li>
                     </ul>
                   </div>
-                </div>
-                <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
+                </div> */}
+                {/* <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
                   <div className="footer-widget">
                     <div className="footer-widget-heading">
                       <h3>Subscribe</h3>
@@ -262,19 +379,19 @@ class Footer extends Component {
                         Don’t miss to subscribe to our new feeds, kindly fill
                         the form below.
                       </p>
-                    </div>
-                    <div className="subscribe-form">
+                    </div> */}
+                    {/* <div className="subscribe-form">
                       <form action="#">
                         <input type="text" placeholder="Email Address" />
                         <button className="btn btn-rounded">Submit</button>
                       </form>
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="copyright-area">
+          </div> */}
+          {/* <div className="copyright-area">
             <div className="container">
               <div className="row">
                 <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
@@ -300,7 +417,7 @@ class Footer extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </footer>
       </>
     );

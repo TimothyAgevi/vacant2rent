@@ -1,0 +1,45 @@
+.data-input::placeholder{
+    color: black !important;
+    text-align: left !important;
+}
+
+.register-form{
+    background:rgba(8, 6, 110, 0.6) url('../../assets/houseclear.png') !important;
+    background-position: center !important;
+    background-attachment:fixed;
+    background-size: cover !important;
+    background-blend-mode: darken;
+}
+
+#image-upload >input {
+    display:none !important;
+}
+
+#image-upload img{
+    width:100px !important;
+    cursor:pointer !important;
+}
+
+#cert-upload >input {
+    display: none !important;
+}
+
+.cert{
+    cursor:pointer !important;
+}
+
+#cert-upload{
+    border:1px solid black !important;
+    border-radius: 6px !important;
+    color: purple !important;
+}
+
+.policy-agreement{
+    font-size:13px !important;
+}
+
+.reg-submit-btn{
+    border-radius: 50px !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}

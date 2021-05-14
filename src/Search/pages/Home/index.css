@@ -1,0 +1,46 @@
+/* desktop styles */
+#listing-cta{
+    /* height: 40vh; */
+    background: rgba(0, 0, 0,.7) url("../../../assets/house-1.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    background-blend-mode: darken !important;
+}
+
+#insights{
+    background: rgba(0, 0, 0,.7) url("../../../assets/insightsbg.jpg") !important;
+    background-size: cover !important;
+    /* background-position: center !important; */
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    background-blend-mode: darken !important;
+}
+
+.desktop-filter{
+    display: none !important;
+}
+
+.agent-contact{
+    font-size: 13px !important;
+    text-align: left !important;
+}
+
+/* mobile styles */
+@media only screen and (max-width:768px){
+
+    #root{
+        padding:0 !important;
+        margin:0 !important;
+    }
+
+    .container{
+        padding:0 3px 0 0 !important;
+        margin: 0 !important;
+    }
+
+    .mobile-filter{
+        display: none !important;
+    }
+}

@@ -11,8 +11,8 @@ function Payment() {
     <AppLayout>
       <main>
         <div className="container ">
-          <div style={{ padding: "100px 0 50px 0" }}>
-            <h1 className="color-primary text-center">Cart</h1>
+          <div style={{ padding: "100px 0 50px 0", marginTop:"5em" }}>
+            <h1 className="color-primary text-center" style={{color:"purple"}}>CART</h1>
           </div>
           <div className="cards row justify-content-around">
             <PaymentCard

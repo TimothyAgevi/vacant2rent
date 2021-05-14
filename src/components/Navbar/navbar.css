@@ -3,5 +3,25 @@
   background-color: orange;
   color: white;
   padding: .5rem 1rem;
-  border-radius: 10px
+  border-radius: 20px
+}
+
+nav{
+  background-color:rgba(76, 0, 130, 0.582);
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media only screen and (max-width:768px){
+  nav{
+    padding: 0 !important;
+    margin: 0 !important
+  }
+
+  .nav-bar-logo{
+    display: none !important;
+    height:auto !important;
+    max-width:5em !important;
+    width: 50% !important;
+  }
 }

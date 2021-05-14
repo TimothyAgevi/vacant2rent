@@ -7,7 +7,7 @@ function SearchProperties() {
     <AppLayout>
 
 
-      <h2 className='color-primary text-center'>Listed Proerties</h2>
+      <h2 className='color-primary text-center'>Listed Properties</h2>
 
       <PropertyList />
     </AppLayout>

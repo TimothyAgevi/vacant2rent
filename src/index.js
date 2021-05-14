@@ -14,13 +14,15 @@ import Home from './Search/pages/Home/index'
 // import SearchProperties from './Views/SearchProperties'
 import AddLists from './Views/AddLists'
 import ViewProperty from './V2Rcode/ViewProperty'
-import HomePage from "Views/HomePage";
+import LandingPage from './Views/LandingPage'
+// import HomePage from "Views/HomePage";
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path='/' component={HomePage} />
+      {/* <Route exact path='/' component={HomePage} /> */}
+      <Route exact component={LandingPage} path="/"/>
       <Route exact component={Login} path='/login'/>
       <Route exact component={Register} path='/register'/>
       <Route  exact component={PaymentForm} path='/pay'/>

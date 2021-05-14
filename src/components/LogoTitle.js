@@ -1,8 +1,12 @@
 import React from 'react'
+import logo from 'assets/images/logo-removebg.png'
+// import '../components/Navbar/navbar.css'
 
 function LogoTitle() {
   return (
-    <p style={{fontSize:'18px'}}>Vacant<span className="font-bold">2Rent</span></p>
+    <div className="nav-bar-logo" style={{backgroundColor:"re", marginLeft:"0"}}> 
+        <img src={logo} style={{height:"auto", maxWidth:"10em", width:"90%"}}/>
+    </div>
   )
 }
 export default LogoTitle

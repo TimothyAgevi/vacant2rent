@@ -1,0 +1,38 @@
+@media only screen and (max-width:768px){
+    img{
+        margin-left: 0 !important;
+    }
+
+    .vertical-line{
+        display:none !important;
+    }
+
+    .mpesa-payment{
+        /* display: none !important; */
+        align-items: left;
+        margin-left: -2.5em !important;
+    }
+
+    .mpesa-payment img{
+        margin-left: 2em !important;
+    }
+
+    .phone-label{
+        margin-left:-3em !important;
+        margin-top: -5em !important;
+    }
+
+    .number-input{
+        margin-left: -3em !important;
+        width:150%
+    }
+
+    .mobile-payment{
+        margin-top: -1em !important;
+    }
+
+    .mpesa-button{
+        text-align: left;
+        margin-left: -3em !important;
+    }
+}

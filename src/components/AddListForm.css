@@ -1,0 +1,12 @@
+@media only screen and (max-width:768px){
+    .country-selector{
+        width: 4em !important;
+        /* display: none !important; */
+        margin-left: 3em !important;
+    }
+
+    .area-selector{
+        width: 6em !important;
+        margin-left:0 !important;
+    }
+}

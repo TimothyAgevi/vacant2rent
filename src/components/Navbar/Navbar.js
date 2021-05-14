@@ -49,7 +49,7 @@ export default function Navbar(props) {
           id="example-navbar-warning"
         >
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li className="flex items-center">
+            {/* <li className="flex items-center">
               <Link
                 className={
                   (props.transparent
@@ -61,7 +61,7 @@ export default function Navbar(props) {
               >
                 Search Property
               </Link>
-            </li>
+            </li> */}
 
             <li className="flex items-center">
               <Link
@@ -71,6 +71,7 @@ export default function Navbar(props) {
                     : "text-white hover:text-gray-600") +
                   " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
                 }
+
                 to="/list_property"
               >
                 List Property
@@ -84,22 +85,10 @@ export default function Navbar(props) {
                     : "text-white hover:text-gray-600") +
                   " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
                 }
+                // view_property
                 to="/view_property"
               >
-                View Property
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Link
-                className={
-                  (props.transparent
-                    ? "lg:text-white lg:hover:text-gray-300 text-white"
-                    : "text-white hover:text-gray-600") +
-                  " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
-                }
-                to="/blog"
-              >
-                Blog
+                View Listing
               </Link>
             </li>
 
@@ -111,15 +100,33 @@ export default function Navbar(props) {
                     : "text-white hover:text-gray-600") +
                   " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
                 }
-                to="/contact"
+                // /contact
+                to="#"
               >
                 Contact Us
               </Link>
             </li>
 
-            <li className="flex items-center sign-in">
-              <Link to="/login">Login</Link>
+            <li className="flex items-center">
+              <Link
+                className={
+                  (props.transparent
+                    ? "lg:text-white lg:hover:text-gray-300 text-white"
+                    : "text-white hover:text-gray-600") +
+                  " px-3 py-4 lg:py-2 flex items-center text-xs font-bold"
+                }
+                // /blog
+                to="#"
+              >
+                Blog
+              </Link>
             </li>
+
+            <li className="flex items-center sign-in">
+              {/* login */}
+              <Link to="#">Sign in</Link>  
+            </li>
+                
             <li className="flex items-center">
               <a
                 className={

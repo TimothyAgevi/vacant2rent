@@ -1,0 +1,112 @@
+.landingbg-image{
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    background-blend-mode: darken;
+    background-color:rgba(8, 6, 110, 0.6);
+}
+
+.punch-line{
+    font-weight: 700;
+    color: whitesmoke;
+    line-height: 1em;
+}
+
+button{
+    color: whitesmoke;
+}
+
+.vertical-line{
+    position: absolute;
+    border-left:2px dotted whitesmoke;
+    height: 115px;
+    left: 50%;
+    
+}
+
+/* mobile view */
+@media only screen and (max-width:768px){
+
+    .root{
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .mobile-logo{
+        display: inline-block !important;
+        /* padding:0 !important; */
+        margin:auto !important;
+        text-align: center !important;
+        margin-top: -5em !important;
+    } 
+
+    img{
+        height: auto !important;
+        width: 100% !important;
+        max-width: 30em !important;
+    }
+    .vertical-line{
+        display: none !important;
+    }
+
+    .list-property-button, .search-property-button{
+
+        padding: 0 !important;
+        display: flex;
+        display: block !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .tag-line{
+        background-color: re !important;
+        width: 10.5em;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 1em !important;
+        margin-right: 35px !important;
+        margin-left: 11px !important;
+        text-align: center !important;
+        margin-bottom: 1em !important;
+    }
+
+    .w-full{
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: -1em !important;
+    }
+
+    .list-property-button{
+        width: 20em;
+        margin: 0 !important;
+        margin-right: 5px !important;
+        padding-left: 10 !important;
+        margin-top: 3em !important;
+    }
+
+    .search-property-button{
+        width: 20em;
+    }
+
+    a{
+        margin-top: 1em !important;
+        margin-left: 1em !important;
+        margin-right: 0 !important;
+    }
+
+    span .list-property-button, .search-property-button{
+        line-height: 3em;
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}

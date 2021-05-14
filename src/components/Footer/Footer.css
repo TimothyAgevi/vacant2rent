@@ -1,0 +1,32 @@
+/* mobile screens */
+@media only screen and (max-width:768px){
+
+    .footer-logo img{
+        margin-left: -2em !important;
+    }
+
+    .footer-social-icon{
+        margin-top: -4em !important;
+    }
+
+    .our-office{
+        margin-top: 2em !important;
+    }
+
+    .opening-hours{
+        margin-top: 2em !important;
+    }
+
+    .sub-footer-button{
+        float:left !important;
+        margin-top: 1em !important;
+    }
+
+    ul li a{
+        margin-left: 0 !important;
+    }
+
+    .explore{
+        margin-left: 0 !important;
+    }
+}
